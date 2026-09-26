@@ -1,5 +1,4 @@
 import gsap from "gsap/all";
-import smoke from "../../assets/smoke_final.mp4";
 import mobileHeroBg from "../../assets/hero-mobile.png"
 import { useGSAP } from "@gsap/react";
 import { useMediaQuery } from "react-responsive";
@@ -23,7 +22,6 @@ const Hero = () => {
                     start: "top top",
                     end: "bottom top",
                     scrub: 1.5,
-                    // markers: true
                 }
             });
         };
@@ -44,16 +42,6 @@ const Hero = () => {
                             className="w-full rounded-[2rem] object-cover shadow-[0_-25px_45px_-10px_rgba(255,0,0,0.15)]"
                         />
                     </div>
-
-                    {/* Smoke video (upper layer) */}
-                    <video
-                        src={smoke}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 md:w-full md:h-full object-cover z-10 pointer-events-none object-center opacity-50 mix-blend-hard-light md:top-0 top-[5%] h-[90%]  rounded-[2rem] md:px-0"
-                    ></video>
                 </div>
                 <div className="p-4 flex flex-col md:justify-center">
                     <div className="relative h-dvh">
